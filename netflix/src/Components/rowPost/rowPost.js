@@ -58,7 +58,7 @@ return  (
                 // Make sure to return JSX elements within the map function
         ))}
         </div>
-        {console.log(movieid ?movieid:false,'ddddddddddddddddddddddddddddd')}
+        {console.log(movieid ?movieid:false,'')}
         {movieid ? <YouTube opts={opts} videoId={movieid} />:'' }  
     </div>
 
