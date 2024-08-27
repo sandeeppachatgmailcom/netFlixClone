@@ -29,7 +29,6 @@ function RowPost(props) {
     const handleMovie =(movieId)=>{
         console.log(movieId,'movieId');
         axios.get(`/movie/${movieId}/videos?api_key=${apiKey}`).then(res=>{
-             
             setMovieId(res.data.results?res.data.results[0].key:'');
             console.log(res.data.results,'movieidmovieid')
         })
@@ -37,7 +36,7 @@ function RowPost(props) {
         
     }
     const opts = {
-        height: '200',
+        height: '200px',
         width: '100%',
         playerVars: {
           // https://developers.google.com/youtube/player_parameters
@@ -51,8 +50,8 @@ return  (
                 
             {movies.map((obj) => (
                 <div onClick={()=>{
-                    handleMovie(obj.id)
-                }} key={obj.id} className={myClass} style={{ backgroundPosition:'center',backgroundSize:'cover' , backgroundImage: `url(${imageUrl}${obj.backdrop_path})` }}>
+                    handleMovie(obj?.id)
+                }} key={obj?.id} className={myClass} style={{ backgroundPosition:'center',backgroundSize:'cover' , backgroundImage: `url(${imageUrl}${obj.backdrop_path})` }}>
                         <h5 className='bottom-0 start-0 text-light' > {obj.title}</h5> {/* Assuming the title property exists in your movie objects */}
                  </div> 
                 // Make sure to return JSX elements within the map function

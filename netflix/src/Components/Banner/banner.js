@@ -25,25 +25,21 @@ function Banner(props) {
   },[movie])
 
   return (
-    <div style={{ backgroundImage: `url(${movie ? imageUrl + movie.poster_path : ''})`, }}
-    className='container-fluid rounded text-light banner'  >
-        <div className='content  container-fluid col-12 w-100  '>
+    <div style={{ backgroundImage: `url(${movie ? imageUrl + movie.poster_path : ''})`,backgroundSize:'cover',backgroundPosition:'center',backgroundRepeat:'no-repeat'   }}
+    className=' container-fluid rounded text-light banner '  >
+        <div className='content  container-fluid col-12 w-100 ' >
             <div className='container-flex  col-12 '>
             <h1 className='title text text-warning'> {movie?movie.original_title:'' } </h1>
-                <div className='container-flex col-12 d-flex '>
+                <div className='container-flex col-12 d-flex   '>
                     <button className='button btn' type="button"> Play</button>
                     <button className='button btn' type="button"> My list</button>
                 </div>
                 <p className='description   text-left' >{movie?movie.overview:'' } </p>
             </div>
-            <div className='col-9 container-flex '> 
-             
-            </div>
+            
     
         </div>
-        <div className='fade_bottom col-12'>
-
-        </div>
+         
     </div>
   )
 }

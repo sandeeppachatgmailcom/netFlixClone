@@ -15,7 +15,7 @@ useEffect(()=>{
        <NavBar  />
        <Banner/>
        <RowPost link= {originals} preview='large' />
-      <RowPost link= {action} preview='medium' />
+       <RowPost link= {action} preview='medium' />
        <RowPost link= {trending} preview='small' />
        
 
